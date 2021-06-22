@@ -20,7 +20,7 @@ let slides = [
     author: "SUSAN SIMS, INTERACTION DESIGNER AT XYZ "
   },
   {
-    "quote": "ipsum dolor sit amet consectetur adipisicing elit. Sequi laboriosam impedit vero",
+    "quote": "Ipsum dolor sit amet consectetur adipisicing elit. Sequi laboriosam impedit vero",
     "author": "BEVERLY LITTLE"
   }, 
   {
@@ -109,8 +109,8 @@ function changeSlide(id){
     setTimeout(() => {
 
       quotePhoto.src = "images/carousel-" + id + ".jpg";
-      quoteText.innerHtml = slideInfo.quote;
-      author.innerHtml = slideInfo.author;
+      quoteText.innerHTML = slideInfo.quote;
+      author.innerHTML = slideInfo.author;
       document.getElementById("active").id = null;
       document.querySelector(".dot[data-id='" + id + "'").id = "active";
 
