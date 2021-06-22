@@ -1,0 +1,322 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  font-size: 15px;
+  font-family: 'Raleway', 'Arial';
+}
+
+#wrapper{
+  width: 100%;
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3.5rem;
+}
+
+h3, h5, p{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: normal;
+}
+
+span{
+  font-weight: lighter;
+}
+
+nav{
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  height: 4rem;
+  z-index: 2;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none; 
+}
+
+nav li{
+  padding: 1rem;
+}
+
+#collapseButton{
+  display: none;
+}
+
+section{
+  width: 100%;
+  position: relative;
+  margin: 0px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.fixed-width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.small-bold-text{
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+
+section#home{
+  background-image: url("images/header.jpg");
+  color: white;
+  height: 90vh;
+}
+
+section#features{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section#readyToStart{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section#info{
+  background-color: #303357;
+  color: white;
+}
+
+section#footer{
+  background-color: #272a4a;
+  color: white;
+}
+
+footer{
+  color: #a7aeb8;
+}
+
+.flex-3-cols{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-3-cols > div{
+  flex-grow: 1;
+  text-align: center;
+  width: 33%;
+  padding: 1rem;
+}
+
+
+.flex-4-cols{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work{
+  flex-grow: 1;
+  text-align: center;
+  width: 24%;
+  min-height: 250px;
+  margin: 0.5px;
+  position: relative;
+}
+
+.person{
+  flex-grow: 1;
+  width: 24%;
+  padding: 0.75rem;
+  position: relative;
+}
+
+.person > .small-bold-text{
+  color: #e64344;
+}
+
+.person > .social-icons{
+  justify-content: start;
+}
+
+.person > .social-icons > div{
+  color: #aaaaaa;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.image-container{
+  background-size: cover;
+  height: 100%;
+}
+
+.work > .backdrop{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(230, 67, 68, 0.8);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.work> .caption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons > div{
+  border: 2px solid white;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  text-align: center;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.features-icon{
+  font-size: 4rem;
+  color: #e64344;
+}
+
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.carousel{
+  background-color: #462a3d;
+}
+
+#slide{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+#slide > #quotePhoto{
+  width: 50%;
+}
+
+#slide > #quote{
+  width: 50%;
+}
+
+#quote > #content{
+  padding: 3.5rem;
+  color: white;
+  width: 80%;
+}
+
+#content > h2{
+  font: 2rem 'Cardo';
+  font-weight: normal;
+}
+
+#content > #dots{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+
+#dots > .dot{
+  opacity: 0.5;
+  color: white;
+  margin: 0.25rem;
+  font-size: 0.7rem;
+  transform: 0.2s linear;
+  cursor: pointer;
+}
+
+.dot#active{
+  opacity: 1;
+}
+
+button{
+  border: 0px;
+  border-radius: 0.1rem;
+  padding: 0.75rem;
+  background-color: #e64344;
+  color: white;
+  min-width: 170px;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px){
+  
+  #slide > #quotePhoto, #slide > #quote, #quote > #content{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+
+  #collapseButton{
+    display: block;
+  }
+
+  #collapsable{
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    background-color: #161829;
+    transform: 0.3s linear;
+    opacity: 0;
+  }
+
+  nav ul{
+    display: block;
+  }
+  
+  h1{
+    font-size: 2rem;
+  }
+
+  .work{
+    width: 100%;
+  }
+
+  .person{
+    width: 50%;
+  }
+
+}
