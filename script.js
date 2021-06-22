@@ -1,4 +1,7 @@
-let collapseButton = document.getElementsByName("collapseButton");
+let collapseButton = document.getElementById("collapseButton");
+let collapsable = document.getElementById("collapsable");
+
+let links = document.getElementsByTagName("li");
 
 let works = document.getElementsByClassName("work");
 
@@ -35,11 +38,37 @@ let slides = [
 
 ]
 
-let quotes = [
-  ,
-]
 
-let authors = {
+collapseButton.onclick = () => {showHideCollapsable()};
+
+
+function showHideCollapsable(){
+
+  console.log(collapsable)
+
+  if(collapsable.style.opacity == 0){
+    collapsable.style.opacity = 1;
+  }
+  else{
+    collapsable.style.opacity = 0;
+  }
+  
+}
+
+
+for(let i = 0; i < links.length; i++){
+  links[i].onclick = () => {goToSection(links[i].getAttribute("data-goto"))};
+}
+
+function goToSection(id){
+
+  let sectionOffset = document.getElementById(id).offsetTop;
+
+  window.scrollTo({
+    top: sectionOffset,
+    left: 0,
+    behavior: 'smooth'
+  });
 
 }
 

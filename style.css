@@ -53,6 +53,10 @@ nav li{
 
 #collapseButton{
   display: none;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 
 section{
@@ -89,7 +93,7 @@ section#features{
   padding-bottom: 3rem;
 }
 
-section#readyToStart{
+section#download{
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
