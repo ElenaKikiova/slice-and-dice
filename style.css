@@ -49,6 +49,7 @@ nav ul{
 
 nav li{
   padding: 1rem;
+  cursor: pointer;
 }
 
 #collapseButton{
