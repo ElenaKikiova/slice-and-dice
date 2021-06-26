@@ -204,11 +204,6 @@ footer{
   cursor: pointer;
 }
 
-.features-icon{
-  font-size: 4rem;
-  color: #e64344;
-}
-
 .centered{
   position: absolute;
   top: 50%;
@@ -297,6 +292,10 @@ button{
 
   #collapseButton{
     display: block;
+  }
+
+  .flex-3-cols>div{
+    width: 100%;
   }
 
   #collapsable{
